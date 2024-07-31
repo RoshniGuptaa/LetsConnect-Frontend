@@ -1,7 +1,14 @@
 import React from 'react'
 import StatusUserCard from './StatusUserCard'
+import { AiOutlineClose} from 'react-icons/ai'
+import { useNavigate } from 'react-router-dom'
 
 const Status = () => {
+
+  const navigate=useNavigate()
+  const handleNavigate=()=>{
+    navigate(-1)
+  }
   return (
     <div className='bga'>
       <div className='flex items-center bg-gradient-to-r from-purple-800 to-green-400 px-[14vw] py-[7vh]'>
@@ -17,7 +24,7 @@ const Status = () => {
         </div>
         {/* Right part */}
         <div className='relative h-[85vh] lg:w-[70%] w-[50%] bg-[#101c13]'>
-
+         <AiOutlineClose onClick={handleNavigate} className='text-white cursor-pointer absolute top-5 right-10 text-xl'/>
         </div>
       </div>
     </div>
