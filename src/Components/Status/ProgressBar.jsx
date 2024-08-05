@@ -1,12 +1,24 @@
 import React, { useEffect, useState } from 'react'
-
-const ProgressBar = ({index,activeIndex}) => {
-    const isActive=index=activeIndex;
+import "./ProgressBar.css"
+const ProgressBar = ({index,activeIndex,duration}) => {
+    const isActive=index===activeIndex;
     const [progress,setProgress] = useState()
 
     useEffect(()=>{
-       
-    },[])
+       const intervalId=setInterval(()=>{
+            setProgress((prev)=>{
+              if(prev<100){
+                return prev+1
+              }
+              clearInterval(intervalId)
+              return prev
+            })
+       },duration/100)
+    },[duration,activeIndex])
+
+    useEffect(()=>{
+      setProgress(0)
+    },[activeIndex])
   return (
     <div className={`progress-bar-container ${isActive?"active":""}`} >
        <div className={`${isActive?"progress-bar":""}`}
@@ -18,4 +30,4 @@ const ProgressBar = ({index,activeIndex}) => {
   )
 }
 
-export default PregressBar
+export default ProgressBar

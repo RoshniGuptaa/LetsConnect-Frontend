@@ -14,7 +14,7 @@ const ChatCard =()=> {
              <div className='flex justify-between'>
                  <p>message...</p>
                   <div className='flex space-x-2 items-center'>
-                    <p className='text-xs py-1 px-2 text-white bg-[#77B0AA] rounded-full'>5</p>
+                    <p className='text-xs py-1 px-2 text-white bg-[#7fb1ac] rounded-full'>5</p>
                   </div>
              </div>
        </div>

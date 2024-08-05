@@ -11,7 +11,7 @@ const Status = () => {
   }
   return (
     <div className='bga'>
-      <div className='flex items-center bg-gradient-to-r from-purple-800 to-green-400 px-[14vw] py-[7vh]'>
+      <div className='flex items-center bg-gradient-to-bl from-blue-900 to-yellow-300 px-[14vw] py-[7vh]'>
         {/* left part*/}
         <div className=' left h-[85vh] bg-[#1d3824] lg:w-[30%] w-[50%] px-5'>
             <div className='pt-5 h-[13%]'>
