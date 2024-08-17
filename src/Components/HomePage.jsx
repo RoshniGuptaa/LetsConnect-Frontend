@@ -52,6 +52,7 @@ const HomePage = () => {
    const[isGroup,setIsGroup]=useState(false)
   const handleCreateGroup=()=>{
    setIsGroup(true);
+   setIsProfile(false);
   }
   return (
     <div className="relative">
@@ -59,7 +60,7 @@ const HomePage = () => {
 
       <div className="flex bg-[#f0f2f5] h-[90vh] absolute top-6 left-[2vw] w-[96vw]">
         <div className="left w-[30%] bg-[#003C43] h-full">
-         {isGroup && (<CreateGroup></CreateGroup>)}
+         {isGroup  && (<CreateGroup></CreateGroup>)}
           {/*Profile  */}
           {isProfile && !isGroup && (
             <div className="w-full h-full">
@@ -67,7 +68,7 @@ const HomePage = () => {
             </div>
           )}
 
-          {!isProfile && (
+          {!isProfile &&!isGroup && (
             <div className="w-full">
               {/* Home */}
               {
